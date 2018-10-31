@@ -5,9 +5,36 @@ Learning to golang at [this tutorial](https://golang.org/doc/articles/wiki/).
 
 
 
-## Usage
+## Development
 
-List item
+```bash
+go run wiki.go
+# access -> localhost:8080
+```
+
+
+
+## Build and Application start
+
+```bash
+go build wiki.go
+./wiki
+```
+
+
+
+## Docker
+
+```bash
+docker-compose up
+# access -> localhost:8080/view/test
+```
+
+
+
+## Page Access
+
+List item : TODO
 
 http://localhost:8080/list/
 
@@ -18,20 +45,3 @@ http://localhost:8080/view/{item}
 Edit item
 
 http://localhost:8080/edit/{item}
-
-
-
-## Build
-
-```bash
-go build wiki.go
-./wiki
-```
-
-
-
-## Development
-
-```bash
-go run wiki.go // access -> localhost:8080
-```
