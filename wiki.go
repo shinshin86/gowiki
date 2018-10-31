@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"path/filepath"
 	"regexp"
 )
 
@@ -24,12 +25,14 @@ func renderTemplaete(w http.ResponseWriter, tmpl string, p *Page) {
 
 func (p *Page) save() error {
 	filename := p.Title + ".txt"
-	return ioutil.WriteFile(filename, p.Body, 0600)
+	fp := filepath.Join("data", filename)
+	return ioutil.WriteFile(fp, p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
 	filename := title + ".txt"
-	body, err := ioutil.ReadFile(filename)
+	fp := filepath.Join("data", filename)
+	body, err := ioutil.ReadFile(fp)
 	if err != nil {
 		return nil, err
 	}

@@ -1,5 +1,4 @@
 # gowiki
--------------
 Simple wiki.
 
 Learning to golang at [this tutorial](https://golang.org/doc/articles/wiki/).
@@ -8,15 +7,17 @@ Learning to golang at [this tutorial](https://golang.org/doc/articles/wiki/).
 
 ## Usage
 
-Access Item
+List item
+
+http://localhost:8080/list/
+
+Access item
 
 http://localhost:8080/view/{item}
 
 Edit item
 
 http://localhost:8080/edit/{item}
-
-
 
 
 
@@ -34,12 +35,3 @@ go build wiki.go
 ```bash
 go run wiki.go // access -> localhost:8080
 ```
-
-
-
-## TODO
-
-- Top page (show content list)
-- Delete item
-- Error page
-
