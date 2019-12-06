@@ -20,3 +20,17 @@ And `build` binary
 go build wiki.go
 ./wiki
 ```
+
+
+
+## Start Application (Docker)
+
+Docker build and run.
+
+```
+docker build -t gowiki .
+docker run -p 8080:8080 -it --rm --name running-gowiki gowiki
+```
+
+Then access to
+http://localhost:8080/view/test
